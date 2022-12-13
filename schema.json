@@ -1,0 +1,72 @@
+{
+    "type": "datasource",
+    "metadata": {},
+    "schema": {
+        "docs": "https://docs.budibase.com",
+        "friendlyName": "CloudByWeb",
+        "type": "API",
+        "description": "Performs a basic HTTP calls to CloudByWeb",
+        "datasource": {
+            "username": {
+                "type": "string",
+                "required": true
+            },
+            "password": {
+                "type": "string",
+                "required": true
+            }
+        },
+        "query": {
+            "create": {
+                "type": "json",
+                "fields": {
+                    "path": {
+                        "display": "Path",
+                        "type": "string",
+                        "required": true
+                    },
+                    "json": {
+                        "display": "Body",
+                        "type": "object",
+                        "required": true
+                    }
+                }
+            },
+            "read": {
+                "type": "fields",
+                "fields": {
+                    "path": {
+                        "display": "Path",
+                        "type": "string",
+                        "required": true
+                    }
+                }
+            },
+            "update": {
+                "type": "json",
+                "fields": {
+                    "json": {
+                        "display": "Body",
+                        "type": "object",
+                        "required": true
+                    },
+                    "path": {
+                        "display": "Path",
+                        "type": "string",
+                        "required": true
+                    }
+                }
+            },
+            "delete": {
+                "type": "fields",
+                "fields": {
+                    "path": {
+                        "display": "Path",
+                        "type": "string",
+                        "required": true
+                    }
+                }
+            }
+        }
+    }
+}
